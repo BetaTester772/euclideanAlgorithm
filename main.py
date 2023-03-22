@@ -1,4 +1,6 @@
 # euclidean algorithm
+import sys
+
 
 def gcd(a, b):
     if b == 0:
@@ -16,4 +18,6 @@ def main():
 
 
 if __name__ == "__main__":
+    if sys.version[:4] != "3.11":
+        sys.setrecursionlimit(100000)
     main()
