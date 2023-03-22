@@ -1,5 +1,6 @@
 # euclidean algorithm
 import sys
+import time
 
 
 def division(a, b):
@@ -26,8 +27,11 @@ def main():
     a = int(input("Enter first number: "))
     b = int(input("Enter second number: "))
 
+    start = time.time()
     print("=" * 40)
     print("GCD of", a, "and", b, "is", gcd(a, b))
+    end = time.time()
+    print("Time: ", end - start)
 
 
 if __name__ == "__main__":
