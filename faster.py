@@ -1,15 +1,5 @@
-# euclidean algorithm
+# euclidean algorithm which faster than main.py
 import sys
-
-
-def division(a, b):
-    q = 0
-    while True:
-        q += 1
-        a -= b
-        if a < b:
-            r = a
-            return q, r
 
 
 def gcd(a, b):
@@ -17,7 +7,8 @@ def gcd(a, b):
         print("=" * 40)
         return a
     else:
-        q, r = division(a, b)
+        q = a // b
+        r = a % b
         print(a, "=", b, "*", q, "+", r)
         return gcd(b, a % b)
 
