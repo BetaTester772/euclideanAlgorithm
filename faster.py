@@ -29,5 +29,3 @@ if __name__ == "__main__":
     if sys.version[:4] != "3.11":  # check python version
         sys.setrecursionlimit(100000)  # set recursion limit
     main()  # run main function
-
-# jhkim test
