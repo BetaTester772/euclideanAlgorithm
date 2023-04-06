@@ -1,4 +1,4 @@
-# euclidean algorithm which faster than main.py
+# Euclidean algorithm which faster than main.py
 import sys
 import time
 
@@ -20,8 +20,9 @@ def main():
 
     print("=" * 40)
     start = time.time()
-    print("GCD of", a, "and", b, "is", gcd(a, b))
+    GCD = gcd(a, b)
     end = time.time()
+    print("GCD of", a, "and", b, "is", GCD)
     print("Time: ", end - start)
 
 

@@ -1,41 +1,34 @@
-# Euclidean algorithm
+# Euclidean algorithm which faster than main.py
 import sys
 import time
 
 
-def division(a, b):
-    q = 0
-    while True:
-        q += 1
-        a -= b
-        if a < b:
-            r = a
-            return q, r
-
-
 def gcd(a, b):
     if b == 0:
-        print("=" * 40)
+        print("-" * 40)
         return a
     else:
-        q, r = division(a, b)
+        q = a // b
+        r = a % b
         print(a, "=", b, "*", q, "+", r)
         return gcd(b, a % b)
 
 
 def main():
-    a = int(input("Enter first number: "))
-    b = int(input("Enter second number: "))
+    a, b = sorted(list(map(int, input("Enter two numbers: ").split())), reverse=True)
 
-    print("=" * 40)
+    print("-" * 40)
     start = time.time()
     GCD = gcd(a, b)
     end = time.time()
     print("GCD of", a, "and", b, "is", GCD)
-    print("Time: ", end - start)
+    print("=" * 40, end='\n\n')
 
 
 if __name__ == "__main__":
     if sys.version[:4] != "3.11":  # check python version
         sys.setrecursionlimit(100000)  # set recursion limit
-    main()  # run main function
+    T = int(input("Enter number of cases: "))
+    print("\n\n")
+    for _ in range(T):
+        main()  # run main function
