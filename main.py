@@ -24,7 +24,8 @@ def gcd(a, b):
 
 
 def main():
-    a, b = sorted(list(map(int, input("Enter two numbers: ").split())), reverse=True)
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
 
     print("=" * 40)
     start = time.time()
