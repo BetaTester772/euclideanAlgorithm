@@ -1,6 +1,5 @@
 # Euclidean algorithm which faster than main.py
 import sys
-import time
 
 
 def gcd(a, b):
@@ -18,9 +17,7 @@ def main():
     a, b = sorted(list(map(int, input("Enter two numbers: ").split())), reverse=True)
 
     print("-" * 40)
-    start = time.time()
     GCD = gcd(a, b)
-    end = time.time()
     print("GCD of", a, "and", b, "is", GCD)
     print("=" * 40, end='\n\n')
 
